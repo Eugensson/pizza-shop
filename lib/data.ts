@@ -336,7 +336,7 @@ export const pizzas = [
     id: "10",
     title: "vegetarian",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae dolorum enim eveniet. Mollitia laudantium, sunt blanditiis ratione quam delectus.For those who love vibrant, fresh flavors with a bit of spice, the Veggie Heatwave Pizza is your perfect choice! Topped with cherry tomatoes, sweet corn, and fresh tomatoes, it offers a refreshing burst in every bite. Spicy jalapeños bring the heat, while a sprinkle of aged Parmesan adds a creamy, savory finish. A fresh and fiery delight for any vegetable lover!",
+      "For those who love vibrant, fresh flavors with a bit of spice, the Veggie Heatwave Pizza is your perfect choice! Topped with cherry tomatoes, sweet corn, and fresh tomatoes, it offers a refreshing burst in every bite. Spicy jalapeños bring the heat, while a sprinkle of aged Parmesan adds a creamy, savory finish. A fresh and fiery delight for any vegetable lover!",
     image: "/vegetarian.webp",
     priceSm: 9.99,
     priceMd: 10.99,
