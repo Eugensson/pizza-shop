@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
+
+import { Header } from "@/components/header";
+import { CartMobile } from "@/components/cart-mobile";
+
 import "./globals.css";
 
 const bangers = Bangers({
@@ -35,6 +39,8 @@ export default function RootLayout({
       <body
         className={`${bangers.variable} ${quicksand.variable} ${robotoCondensed.variable} antialiased`}
       >
+        <Header />
+        <CartMobile />
         {children}
       </body>
     </html>
