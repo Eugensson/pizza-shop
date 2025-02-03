@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
 
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { CartMobile } from "@/components/cart-mobile";
 import { CartDesktop } from "@/components/cart-desktop";
 import { CartMobileButton } from "@/components/cart-mobile-button";
@@ -49,6 +50,7 @@ export default function RootLayout({
           <CartMobile />
           {children}
           <CartDesktop />
+          <Footer />
         </body>
       </html>
     </CartProvider>

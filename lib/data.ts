@@ -1,3 +1,10 @@
+import {
+  RiYoutubeLine,
+  RiFacebookFill,
+  RiInstagramLine,
+  RiTwitterXFill,
+} from "react-icons/ri";
+
 export const pizzas = [
   {
     id: "1",
@@ -368,5 +375,28 @@ export const pizzas = [
         price: 2,
       },
     ],
+  },
+];
+
+export const socialLinks = [
+  {
+    label: "Youtube",
+    icon: RiYoutubeLine,
+    link: "https://www.youtube.com",
+  },
+  {
+    label: "Facebook",
+    icon: RiFacebookFill,
+    link: "https://www.facebook.com",
+  },
+  {
+    label: "Instagram",
+    icon: RiInstagramLine,
+    link: "https://www.instagram.com",
+  },
+  {
+    label: "TwitterX",
+    icon: RiTwitterXFill,
+    link: "https://www.x.com",
   },
 ];
