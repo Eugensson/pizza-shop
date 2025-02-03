@@ -44,7 +44,6 @@ export const Banner = () => {
               className="absolute top-6 left-4 hidden xl:flex"
             >
               <Image
-                priority
                 width={160}
                 height={84}
                 src="/chilli-1.png"
@@ -58,7 +57,6 @@ export const Banner = () => {
               className="absolute top-16 -left-4 hidden xl:flex"
             >
               <Image
-                priority
                 width={130}
                 height={84}
                 src="/chilli-2.png"
@@ -72,7 +70,6 @@ export const Banner = () => {
               className="absolute top-80 -left-24 hidden xl:flex"
             >
               <Image
-                priority
                 width={84}
                 height={72}
                 src="/garlic-1.png"
@@ -86,7 +83,6 @@ export const Banner = () => {
               className="absolute top-[22rem] -left-8 hidden xl:flex"
             >
               <Image
-                priority
                 width={84}
                 height={72}
                 src="/garlic-2.png"
@@ -100,7 +96,6 @@ export const Banner = () => {
               className="absolute top-96 -left-20 hidden xl:flex"
             >
               <Image
-                priority
                 width={100}
                 height={72}
                 src="/garlic-3.png"
@@ -114,7 +109,6 @@ export const Banner = () => {
               className="absolute top-96 left-12 hidden xl:flex"
             >
               <Image
-                priority
                 width={180}
                 height={72}
                 src="/leaves.png"

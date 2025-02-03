@@ -7,11 +7,11 @@ import { CartItem } from "@/components/cart-item";
 import { CartHeader } from "@/components/cart-header";
 import { CartFooter } from "@/components/cart-footer";
 
-import { CartContext } from "@/context/cart-context";
-
 import { CartItemType } from "@/types";
 
-export const CartMobile = () => {
+import { CartContext } from "@/context/cart-context";
+
+export const CartDesktop = () => {
   const context = useContext(CartContext);
 
   if (!context)
@@ -22,17 +22,16 @@ export const CartMobile = () => {
   return (
     <div
       className={twMerge(
-        "fixed left-0 z-20 w-full h-full lg:hidden flex flex-col transition-all duration-300 bg-white",
-        isOpen ? "bottom-0" : "-bottom-full"
+        "fixed top-0 bottom-0 w-[500px] hidden lg:flex flex-col shadow-2xl bg-white transition-all duration-300",
+        isOpen ? "left-0" : "-left-full"
       )}
     >
       <CartHeader />
       <ul
         className={twMerge(
-          "p-2 mr-4 mt-8 h-[60vh] flex flex-col gap-y-4 overflow-y-scroll scrollbar-thin",
-          cartItems.length >= 3
-            ? "scrollbar-track-black/10 scrollbar-thumb-secondary"
-            : "scrollbar-track-transparent"
+          "px-10 py-2 mr-4 mt-8 h-[65vh] flex flex-col gap-y-4",
+          cartItems.length >= 3 &&
+            "overflow-y-scroll scrollbar-thin scrollbar-track-black/10 scrollbar-thumb-secondary"
         )}
       >
         {cartItems.map((item: CartItemType) => (

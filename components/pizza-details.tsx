@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Topping } from "@/components/topping";
 import { SizeSelection } from "@/components/size-selection";
 import { DoughSelection } from "@/components/dough-selection";
+
+import { CartContext } from "@/context/cart-context";
 
 import { AdditionalToppingType, DoughType, Pizza, SizeType } from "@/types";
 
@@ -15,7 +17,14 @@ interface PizzaDetailsProps {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const PizzaDetails = ({ pizza }: PizzaDetailsProps) => {
+export const PizzaDetails = ({ pizza, setModal }: PizzaDetailsProps) => {
+  const context = useContext(CartContext);
+
+  if (!context)
+    throw new Error("CartContext must be used within a CartProvider");
+
+  const { addToCart } = context;
+
   const [size, setSize] = useState<SizeType>("small");
   const [dough, setDough] = useState<DoughType>("traditional");
   const [additionalTopping, setAdditionalTopping] =
@@ -105,6 +114,18 @@ export const PizzaDetails = ({ pizza }: PizzaDetailsProps) => {
           <button
             type="button"
             className="btn btn-lg gradient w-full space-x-2"
+            onClick={() => {
+              addToCart(
+                pizza.id,
+                pizza.image,
+                pizza.title,
+                price,
+                additionalTopping,
+                size,
+                dough
+              );
+              setModal(false);
+            }}
           >
             <span>Add to cart for</span>
             <span>$ {price}</span>
