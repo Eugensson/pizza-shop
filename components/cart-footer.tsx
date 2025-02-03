@@ -72,12 +72,12 @@ export const CartFooter = () => {
           <button
             type="button"
             aria-label="Close checkout modal"
-            className="absolute top-4 right-4 z-30 cursor-pointer hover:scale-110 transition-all duration-300"
+            className="absolute top-2 right-2 z-30 cursor-pointer hover:scale-110 transition-all duration-300"
             onClick={closeModal}
           >
             <IoCloseOutline size={36} className="text-orange" />
           </button>
-          <CheckoutDetails />
+          <CheckoutDetails setModal={setModal} />
         </Modal>
       )}
     </>

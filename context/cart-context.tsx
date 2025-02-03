@@ -29,6 +29,7 @@ interface CartContextType {
   ) => void;
   removeFromCart: (id: string, price: number, dough: DoughType) => void;
   cartItems: CartItemType[];
+  setCartItems: Dispatch<SetStateAction<CartItemType[]>>;
   increaseAmount: (id: string, price: number) => void;
   decreaseAmount: (id: string, price: number) => void;
   totalAmount: number;
@@ -147,6 +148,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         addToCart,
         removeFromCart,
         cartItems,
+        setCartItems,
         increaseAmount,
         decreaseAmount,
         totalAmount,
